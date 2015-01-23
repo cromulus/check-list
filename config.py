@@ -65,26 +65,18 @@ elif ENVIRONMENT == 'TESTING':
 
 # ---------------------------------- MONGO -
 
-
-
 SECRET_KEY 					= os.getenv('SESSION_SECRET', 'Significance')
-
 
 BASIC_AUTH_USERNAME			= os.getenv('BASIC_AUTH_USERNAME', '')
 BASIC_AUTH_PASSWORD			= os.getenv('BASIC_AUTH_PASSWORD', '')
 
-
-TWILIO_ACCOUNT_SID			= "ACfe08bc02cc35943bf5d332a86e3526a8"
-TWILIO_AUTH_TOKEN			= "21e0167335a7f876653f2eb46e98af0c"
-TWILIO_NUMBER 				= os.getenv('TWILIO_NUMBER', '+16466473454')
-
-GOOGLE_API_KEY 				= "AIzaSyCJxQK1oDn4U3kbDIK-epf96ckze7fuSHQ"
+TWILIO_ACCOUNT_SID			= os.environ['TWILIO_ACCOUNT_SID']
+TWILIO_AUTH_TOKEN			  = os.environ['TWILIO_AUTH_TOKEN']
+TWILIO_NUMBER 				  = os.environ['TWILIO_NUMBER']
 
 # language module:
 SUPPORTED_LANGUAGES 		= ['en', 'es']
 DEFAULT_LANGUAGE 			= 'en'
-GOOGLE_API_TRANSLATE_SPREADSHEET_KEY = '1O2VvGGMeIEeugPa-TBBk7sKt4Kstdw31bphQ5jDp71c'
-
 
 
 del os
